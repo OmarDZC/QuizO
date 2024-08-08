@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="js.js" defer></script>
+    <title>QUIZ ANIME</title>
+</head>
+<body>
+    <div class="containerdeQuizs">
+
+        <div class="containerQuiz" id="quiz1">
+            <div class="pregunta">
+                <div class="containerPrimera">
+                    <p class="primeraPregunta">En la saga de Dragon Ball Z,<br> ¿qué nombre recibe la técnica que Goku usa para teletransportarse instantáneamente a cualquier lugar, también conocida como<br> la habilidad del "Instant Transmission"?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz1',false)">Kamehameha</button> 
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz1', true)">Shunkan Idō</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz1', false)">Kaio-Ken</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz2">
+            <div class="pregunta">
+                <div class="containerSegunda">
+                    <p class="segundaPregunta">¿Qué es la "Zanpakutō" y qué rol juega en la vida de un Shinigami en el anime Bleach?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz2',true)">Una espada espiritual que tiene un poder único y que se manifiesta de diferentes formas dependiendo del Shinigami</button> 
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz2', false)">Una técnica de combate que solo se activa al meditar</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz2', false)">Una espada que permite volar</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz3">
+            <div class="pregunta">
+                <div class="containerTercera">
+                    <p class="terceraPregunta">¿Cuál es la relación entre el Rinnegan y los poderes de los Ojos de la Luna en la serie Naruto, y qué papel<br> específico juega el Rinnegan en el plan de Kaguya Ootsutsuki?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz3',false)">El Rinnegan permite a Kaguya usar el Infinite Tsukuyomi directamente sin necesidad de otra habilidad</button> 
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz3', true)">El Rinnegan es necesario para activar el Tsuki no Me Keikaku (Plan Ojos de la Luna) para crear un genjutsu global</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz3', false)">El Rinnegan es el único medio para invocar a los seis caminos del poder, necesarios para completar el plan Ojos de la Luna</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback3"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz4">
+            <div class="pregunta">
+                <div class="containerCuarta">
+                    <p class="cuartaPregunta">¿En qué episodio de One Piece se revela la verdadera identidad<br> de la Fruta del Diablo de Luffy y qué evento específico lleva a esta revelación?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz4',false)">Episodio 870, cuando Kaido confirma la verdadera naturaleza de la Fruta del Diablo en Wano</button> 
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz4', false)">Episodio 517, durante la batalla contra el almirante Aokiji en Punk Hazard</button>
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz4', true)">Episodio 739, cuando se revela la historia detrás de la Fruta del Diablo en el arco de Dressrosa</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback4"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz5">
+            <div class="pregunta">
+                <div class="containerQuinta">
+                    <p class="quintaPregunta">En la primera parte de la serie, ¿cuál es el nombre del hechizo que utiliza Yuno<br> para superar el hechizo defensivo del "Ojo del Sol" y cómo se diferencia de los hechizos convencionales en su aplicación?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz5',true)">星の光 (Hoshi no Hikari) - Genera una lluvia de luz estelar que atraviesa barreras mágicas mediante la manipulación de la luz</button> 
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz5', false)">風の刃 (Kaze no Yaiba) - Emite cuchillas de viento de alta velocidad que cortan a través de defensas mágicas y físicas</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz5', false)">流星群 (Ryūsei-gun) - Convoca una lluvia de meteoritos que explotan al contacto, causando una gran destrucción a través de la fuerza bruta</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback5"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz6">
+            <div class="pregunta">
+                <div class="containerSexta">
+                    <p class="sextaPregunta">¿Qué particularidad del sistema de entrenamiento de Blue Lock se revela en el episodio en el que se presenta<br> el primer "match" de prueba, y cómo impacta en la dinámica del equipo?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz6',false)">El sistema de entrenamiento permite la formación de equipos con habilidades complementarias, desafiando la cohesión del grupo al centrarse en habilidades individuales</button> 
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz6', true)">Cada jugador debe cumplir una meta individual para asegurar su lugar en el equipo, generando una competencia interna intensa</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz6', false)"> Los jugadores son divididos en equipos que compiten entre sí para obtener un lugar en el equipo nacional, con reglas estrictas sobre el juego en equipo</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback6"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz7">
+            <div class="pregunta">
+                <div class="containerSeptima">
+                    <p class="septimaPregunta">¿Qué técnica específica del "Adolla Burst" permite a Shinra Kusakabe acelerar sus movimientos<br> a niveles extremos, y qué impacto tiene en el combate?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz7',false)">光速燃焼 (Light Speed Burn) - Genera llamas a velocidad de la luz para atacar y defender</button> 
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz7', false)">燃焼加速 (Burning Acceleration) - Permite moverse a velocidades ultrarrápidas y aumentar el daño del ataque</button>
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz7', true)">神速 (Divine Speed) - Aumenta la velocidad y la intensidad del fuego generado</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback7"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz8">
+            <div class="pregunta">
+                <div class="containerOctava">
+                    <p class="octavaPregunta">¿Qué es lo que distingue la habilidad del "Humo Infernal" del "Infernal"<br> de la primera temporada de la serie, y cuál es su efecto específico en los combatientes?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz8',true)">高温蒸気 (Kōon Jōki) - Genera vapor a alta temperatura que causa quemaduras severas</button> 
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz8', false)">煙幕爆発 (Kemmakuhōsatsu) - Libera una nube de humo que causa alucinaciones y confusión</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz8', false)">濃煙放射 (Nōen Hōsha) - Emite humo denso que reduce la visibilidad y sofoca el fuego del entorno</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback8"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz9">
+            <div class="pregunta">
+                <div class="containerNovena">
+                    <p class="novenaPregunta">¿Qué regla específica del Death Note se relaciona con el tiempo límite para escribir la causa de muerte después del nombre?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz9',false)">Debe ser escrito en los primeros 10 minutos</button> 
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz9', true)">Debe ser escrito dentro de los 30 segundos</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz9', false)">Debe ser escrito dentro de los 20 segundos</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback9"></div>
+            </div>
+        </div>
+
+        <div class="containerQuiz" id="quiz10">
+            <div class="pregunta">
+                <div class="containerDecima">
+                    <p class="decimaPregunta">¿Qué descubrimiento crucial realiza Senku sobre el mineral de la petrificación en Dr. Stone?</p>
+                    <div class="containerRespuesta">
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz10',false)">Puede ser usado como catalizador para la ciencia avanzada</button> 
+                        <button class="respuesta" data-correct="true" onclick="checkAnswer(this,'quiz10', true)">Permite manipular la energía solar para revertir la petrificación</button>
+                        <button class="respuesta" data-correct="false" onclick="checkAnswer(this,'quiz10', false)">Es necesario para crear una fórmula que revierta la petrificación</button>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback10"></div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+</html>
