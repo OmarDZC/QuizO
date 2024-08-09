@@ -96,6 +96,35 @@ button {
     margin-left: 50%;
 }
 
+/* PAGINAS DE RESULTADOS */
+.resultado0-4{
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    border: #3f3e3e solid;
+}
+.resultado5-6{
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    border: #3f3e3e solid;
+}
+.resultado7-9{
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    border: #3f3e3e solid;
+}
+.resultado10{
+    padding: 200px;
+    border-radius: 10px;
+    border: #3f3e3e solid;
+    background-image: url(luffy.jpeg);
+}
+.resultado10 h1{
+    color: #ffff;
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 480px){
     body{
@@ -140,3 +169,58 @@ button {
     }
 }
 
+/*RESPONSIVE CON GRID*/
+/*.containerdeQuizs{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            300px,
+            1fr
+        )
+    );
+    gap: 16px;
+    padding: 16px;
+}
+
+.containerQuiz{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            300px,
+            1fr
+        )
+    );
+    gap: 16px;
+    padding: 16px;
+    margin-top: -30px;
+}
+
+.pregunta p {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            300px,
+            1fr
+        )
+    );
+    gap: 16px;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.respuesta{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            300px,
+            1fr
+        )
+    );
+    gap: 16px;
+    padding: 10px 30px;
+    font-size: 14px;
+}*/
