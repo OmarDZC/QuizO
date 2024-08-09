@@ -1,3 +1,6 @@
+//variable puntuacion final
+let score = 0;
+
 function checkAnswer(selectedButton, quizId, isCorrect){
     //deshabilita que se pueda coger mas de una respuesta
 
@@ -14,6 +17,7 @@ function checkAnswer(selectedButton, quizId, isCorrect){
        if(button === selectedButton){
             if(button.dataset.correct === 'true'){
                 button.classList.add('correct');
+                score++;
             } else{
                 button.classList.add('incorrect');
             }
@@ -35,5 +39,34 @@ function checkAnswer(selectedButton, quizId, isCorrect){
         feedback.innerText = 'INCORRECTO, la respuesta correcta era ' + correctAnswer.innerText + ".";
     }
 
-
+    //verifica si es la ultima pregunta
+    if(quizId === 'quiz10'){
+        //esperar 3s y te redirige
+        setTimeout(()=> {
+            redirigirResultado(score);
+        }, 2000); //miliseg
+    }
 }
+
+//funcion para redirigir segun la puntuacion
+function redirigirResultado(score){
+    let url;
+
+    if(score >= 0 && score <= 4){
+        url = 'resultado0-4.html';
+    }else if(score >=5 && score <= 6){
+        url = 'resultado5-6.html';
+    }else if(score >=7 && score <=9){
+        url = 'resultado7-9.html';
+    }else if(score == 10){
+        url = 'resultado10.html';
+    }
+
+    //redirige a la url correspondiente
+    if(url){
+        window.location.href = url;
+    }else{
+        console.error('url no definida para la puntuación: ', score);
+    }
+}
+
