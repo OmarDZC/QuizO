@@ -49,10 +49,10 @@ body {
     text-align: center;
     background-color: #fff;
     font-size: 35px;
-    padding: 20px 200px;
+    padding: 20px 150px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .pregunta {
@@ -85,3 +85,58 @@ button {
     margin-top: 10px;
     font-size: 18px;
 }
+
+.buttonAtras{
+    display: block;
+    width: 100%;
+}
+
+.buttonAtras > a > button {
+    padding: 10px 10px;
+    margin-left: 50%;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px){
+    body{
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+    }
+    .containerdeQuizs{
+        margin-top: -100px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .containerQuiz{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .pregunta p {
+        font-size: 14px;
+        margin: 0;
+    }
+    .containerRespuesta{
+        font-size: 12px;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .respuesta{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .buttonAtras{
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
